@@ -53,20 +53,22 @@ download_data_py() {
 
 
 download_webpages() {
-    urllist="$SCRIPTS/webpages.sources"
-    webpagesdir="$SCRIPTS/webpages.d"
+    urllist="$SCRIPTS/$FAKULTA-webpages.sources"
+    webpagesdir="$SCRIPTS/$FAKULTA/webpages_csv_files"
 
-    wget -N -q -i "$urllist" -P "$webpagesdir"
+    if [ -e "$urlist" ]; then
+        wget -N -q -i "$urllist" -P "$webpagesdir"
+    fi
 }
 
 
 process_data() {
     # Spracujeme stiahnute subory
-    python "$SCRIPTS/AIS_XML2HTML.py" --webpages "$SCRIPTS/webpages.d" "$SCRIPTS/$FAKULTA/xml_files_sk" "$TARGET_DIR/public/SK" "templates/template_2015_sk.html";
-    python "$SCRIPTS/AIS_XML2HTML.py" --lang en --webpages "$SCRIPTS/webpages.d" "$SCRIPTS/$FAKULTA/xml_files_en" "$TARGET_DIR/public/EN" "templates/template_2015_en.html";
+    python "$SCRIPTS/AIS_XML2HTML.py" --webpages "$SCRIPTS/$FAKULTA/webpages_csv_files" "$SCRIPTS/$FAKULTA/xml_files_sk" "$TARGET_DIR/public/SK" "templates/template_2015_sk.html";
+    python "$SCRIPTS/AIS_XML2HTML.py" --lang en --webpages "$SCRIPTS/$FAKULTA/webpages_csv_files" "$SCRIPTS/$FAKULTA/xml_files_en" "$TARGET_DIR/public/EN" "templates/template_2015_en.html";
 
-    python "$SCRIPTS/AIS_XML2HTML.py" --mode statnice --webpages "$SCRIPTS/webpages.d" "$SCRIPTS/$FAKULTA/xml_files_sk" "$TARGET_DIR/public/SK" "templates/template_2015_sk.html";
-    python "$SCRIPTS/AIS_XML2HTML.py" --mode statnice --lang en --webpages "$SCRIPTS/webpages.d" "$SCRIPTS/$FAKULTA/xml_files_en" "$TARGET_DIR/public/EN" "templates/template_2015_en.html";
+    python "$SCRIPTS/AIS_XML2HTML.py" --mode statnice --webpages "$SCRIPTS/$FAKULTA/webpages_csv_files" "$SCRIPTS/$FAKULTA/xml_files_sk" "$TARGET_DIR/public/SK" "templates/template_2015_sk.html";
+    python "$SCRIPTS/AIS_XML2HTML.py" --mode statnice --lang en --webpages "$SCRIPTS/$FAKULTA/webpages_csv_files" "$SCRIPTS/$FAKULTA/xml_files_en" "$TARGET_DIR/public/EN" "templates/template_2015_en.html";
 
     # statnice
 
