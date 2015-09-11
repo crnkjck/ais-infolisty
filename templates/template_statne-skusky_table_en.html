@@ -30,6 +30,11 @@
                 <td><strong>Code</strong>: {{ kod }}</td>
                 <td colspan="2"><strong>Name</strong>: {{ nazov }}</td>
             </tr>
+            {% if webStranka %}
+            <tr>
+                <td colspan="3"><strong>Web page</strong>: <a href="{{ webStranka }}">{{ webStranka }}</a></td>
+            </tr>
+            {% endif %}
             <tr>
                 <td colspan="3"><strong>Study programme</strong>: {{ studijnyProgram|join(', ') }}</td>
             </tr>

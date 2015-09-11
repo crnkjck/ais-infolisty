@@ -38,7 +38,11 @@
                 <td><strong>Course ID</strong>: {{ kod }}</td>
                 <td><strong>Course name</strong>: {{ nazov }}</td>
             </tr>
-
+            {% if webStranka %}
+            <tr>
+                <td colspan="3"><strong>Web page</strong>: <a href="{{ webStranka }}">{{ webStranka }}</a></td>
+            </tr>
+            {% endif %}
             <tr>
                <td colspan="2">
                <strong>Educational activities:</strong>

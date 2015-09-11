@@ -34,6 +34,11 @@
                 <td><strong>Kód</strong>: {{ kod }}</td>
                 <td colspan="2"><strong>Názov</strong>: {{ nazov }}</td>
             </tr>
+            {% if webStranka %}
+            <tr>
+                <td colspan="3"><strong>Webová stránka</strong>: <a href="{{ webStranka }}">{{ webStranka }}</a></td>
+            </tr>
+            {% endif %}
             <tr>
                 <td colspan="3"><strong>Študijný program</strong>: {{ studijnyProgram|join(', ') }}</td>
             </tr>

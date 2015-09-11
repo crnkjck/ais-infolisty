@@ -20,7 +20,6 @@ import os.path
 
 import utils
 
-
 # translations
 trans = {'sk': {'a': 'a'}, 'en': {'a': 'and'}}
 
@@ -52,7 +51,31 @@ def extract_courses(filename, courses):
         return courses
 
 
-def extract_infolists(filename, lang='sk', mode='regular', verbose=True):
+def load_webpages(filename, webpages):
+    """Load a dictionary of webpages from a CSV file with two columns:
+    course_code,webpage_url
+
+    Params:
+        filename: path to the CSV file
+        webpages: dict to extend
+
+    Returns:
+        dict of webpages
+    """
+    import csv
+
+    try:
+        with open(filename, 'rb') as csv_file:
+            csv_reader = csv.reader(csv_file)
+            for row in csv_reader:
+                webpages[row[0]] = row[1]
+    except:
+        print "Error: ", sys.exc_value
+    finally:
+        return webpages
+
+
+def extract_infolists(filename, lang='sk', mode='regular', webpages={}, verbose=True):
     """Extract all infolists with all of their courses from a study program XML file.
 
     Params:
@@ -131,6 +154,10 @@ def extract_infolists(filename, lang='sk', mode='regular', verbose=True):
         # uprava kodov predmetov
         d['kod'] = utils.parse_code(d['kod'])
 
+        # domovska stranka predmetu
+        if d['kod'] in webpages:
+            d['webStranka'] = webpages[d['kod']]
+
         data.append(d)
 
     return data
@@ -159,19 +186,19 @@ def render_HTML(data, tpl_name, output_path=None, courses=None, lang='sk', mode=
 
         html = html_tpl.render(course)
 
-	filename = '%s.html' % kod_predmetu
+        filename = '%s.html' % kod_predmetu
         filename = filename.replace("/","_")
         if output_path is not None:
-	    path = os.path.join(output_path, filename)
+            path = os.path.join(output_path, filename)
             if not os.path.exists(output_path):
                 os.mkdir(output_path)
         else:
-	    path = filename
+            path = filename
         with open(path, 'w') as f:
             f.write(html.encode('utf8'))
 
 
-def main(filenames, tpl_name, output_path=None, lang='sk', mode='regular', verbose=True):
+def main(filenames, tpl_name, output_path=None, lang='sk', mode='regular', webpage_filenames = [], verbose=True):
     if verbose:
         print "Extrahujem nazvy predmetov...",
     courses = {}
@@ -181,10 +208,19 @@ def main(filenames, tpl_name, output_path=None, lang='sk', mode='regular', verbo
     if verbose:
         print "Hotovo."
 
+    webpages = {}
+    if webpage_filenames is not []:
+        if verbose:
+            print "Načítavam domovské stránky predmetov...",
+        for hpfname in webpage_filenames:
+            webpages = load_webpages(hpfname, webpages)
+        if verbose:
+            print "Hotovo."
+
     for f in filenames:
         if verbose:
             print "Spracuvam subor '%s'..." % f
-        data = extract_infolists(f, lang=lang, mode=mode, verbose=verbose)
+        data = extract_infolists(f, lang=lang, mode=mode, webpages=webpages, verbose=verbose)
         render_HTML(data, tpl_name, output_path, courses, mode=mode, lang=lang)
     if verbose:
         print "Hotovo."
@@ -197,12 +233,21 @@ if __name__ == "__main__":
     parser.add_argument('input_path', metavar='input-path', help='path to input XMLs')
     parser.add_argument('output_path', metavar='output-path', help='path for HTML files to be stored')
     parser.add_argument('tpl_name', metavar='tpl-name', help='file with template')
-    parser.add_argument('--lang', dest='lang', nargs='?', default='sk', help='language')
-    parser.add_argument('--mode', dest='mode', nargs='?', default='regular', help='mode of work regular/statnice')
+    parser.add_argument('--lang', dest='lang', default='sk', help='language')
+    parser.add_argument('--mode', dest='mode', default='regular', help='mode of work regular/statnice')
+    parser.add_argument('--webpages', dest='webpages', metavar='webpages-path', help='path to a directory with CSV files of course webpages')
 
     args = parser.parse_args()
 
     xml_path = os.path.join(args.input_path, '*.xml')
     filenames = glob.glob(xml_path)
-    main(filenames, args.tpl_name, args.output_path, lang=args.lang, mode=args.mode)
+    if args.webpages is not None:
+        hpgs_path = os.path.join(args.webpages, '*.csv')
+        webpage_filenames = glob.glob(hpgs_path)
+    else:
+        webpage_filenames = []
+
+    main(filenames, args.tpl_name, args.output_path,
+        lang=args.lang, mode=args.mode,
+        webpage_filenames=webpage_filenames)
 
