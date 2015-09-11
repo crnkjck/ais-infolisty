@@ -9,11 +9,22 @@ class UtilsTests(unittest.TestCase):
 
     maxDiff = None
 
+    base_url = '' # 'https://sluzby.fmph.uniba.sk/infolist/SK/'
+
+    def add_base_url(self, path):
+        if len(self.base_url) > 0:
+            if type(path) is unicode:
+                return unicode(self.base_url) + u'/' + path
+            else:
+                return self.base_url + '/' + path
+        return path
+
     def test_parse_code(self):
         data = {
             'FMFI.KJP/1-MXX-151/00': '1-MXX-151_00',
             u'FMFI.KAMŠ/2-PMS-119/10': u'2-PMS-119_10',
-            'FMFI.KI/1-INF-160/00': '1-INF-160_00'
+            'FMFI.KI/1-INF-160/00': '1-INF-160_00',
+            'FMFI-PriF.KDPP/2-UXX-121/10': '2-UXX-121_10'
         }
         for string, code in data.iteritems():
             self.assertEqual(utils.parse_code(string), code)
@@ -26,10 +37,11 @@ class UtilsTests(unittest.TestCase):
             '1-INF-210 Úvod do matematickej logiky a 1-AIN-411 Úvod do výpočtovej logiky': '1-INF-210 Úvod do matematickej logiky a 1-AIN-411 Úvod do výpočtovej logiky'
         }
         data_links = {
-            u'(FMFI.KMANM/1-MAT-150/00 alebo FMFI.KMANM/1-MMN-150/00 alebo FMFI.KAMŠ/1-EFM-130/00) , (FMFI.KAGDM/1-MAT-120/00 alebo FMFI.KAGDM/1-MMN-120/00)': u'(<a href="https://sluzby.fmph.uniba.sk/infolist/SK/1-MAT-150_00.html">1-MAT-150_00</a> alebo <a href="https://sluzby.fmph.uniba.sk/infolist/SK/1-MMN-150_00.html">1-MMN-150_00</a> alebo <a href="https://sluzby.fmph.uniba.sk/infolist/SK/1-EFM-130_00.html">1-EFM-130_00</a>) a (<a href="https://sluzby.fmph.uniba.sk/infolist/SK/1-MAT-120_00.html">1-MAT-120_00</a> alebo <a href="https://sluzby.fmph.uniba.sk/infolist/SK/1-MMN-120_00.html">1-MMN-120_00</a>)'
+            u'(FMFI.KMANM/1-MAT-150/00 alebo FMFI.KMANM/1-MMN-150/00 alebo FMFI.KAMŠ/1-EFM-130/00) , (FMFI.KAGDM/1-MAT-120/00 alebo FMFI.KAGDM/1-MMN-120/00)':
+                u'(<a href="'+self.add_base_url(u'1-MAT-150_00.html')+u'">1-MAT-150_00</a> alebo <a href="'+self.add_base_url(u'1-MMN-150_00.html')+u'">1-MMN-150_00</a> alebo <a href="'+self.add_base_url(u'1-EFM-130_00.html')+u'">1-EFM-130_00</a>) a (<a href="'+self.add_base_url(u'1-MAT-120_00.html')+u'">1-MAT-120_00</a> alebo <a href="'+self.add_base_url(u'1-MMN-120_00.html')+u'">1-MMN-120_00</a>)'
         }
         data_links_courses = {
-            u'(FMFI.KMANM/1-MAT-150/00 alebo FMFI.KMANM/1-MMN-150/00 alebo FMFI.KAMŠ/1-EFM-130/00) , (FMFI.KAGDM/1-MAT-120/00 alebo FMFI.KAGDM/1-MMN-120/00)': u'(<a href="https://sluzby.fmph.uniba.sk/infolist/SK/1-MAT-150_00.html">1-MAT-150_00 Matematická analýza (2)</a> alebo <a href="https://sluzby.fmph.uniba.sk/infolist/SK/1-MMN-150_00.html">1-MMN-150_00 Matematická analýza (2)</a> alebo <a href="https://sluzby.fmph.uniba.sk/infolist/SK/1-EFM-130_00.html">1-EFM-130_00 Matematická analýza (2)</a>) a (<a href="https://sluzby.fmph.uniba.sk/infolist/SK/1-MAT-120_00.html">1-MAT-120_00 Lineárna algebra a geometria (1)</a> alebo <a href="https://sluzby.fmph.uniba.sk/infolist/SK/1-MMN-120_00.html">1-MMN-120_00 Lineárna algebra a geometria (1)</a>)'
+            u'(FMFI.KMANM/1-MAT-150/00 alebo FMFI.KMANM/1-MMN-150/00 alebo FMFI.KAMŠ/1-EFM-130/00) , (FMFI.KAGDM/1-MAT-120/00 alebo FMFI.KAGDM/1-MMN-120/00)': u'(<a href="'+self.add_base_url(u'1-MAT-150_00.html')+u'">1-MAT-150_00 Matematická analýza (2)</a> alebo <a href="'+self.add_base_url(u'1-MMN-150_00.html')+u'">1-MMN-150_00 Matematická analýza (2)</a> alebo <a href="'+self.add_base_url(u'1-EFM-130_00.html')+u'">1-EFM-130_00 Matematická analýza (2)</a>) a (<a href="'+self.add_base_url(u'1-MAT-120_00.html')+u'">1-MAT-120_00 Lineárna algebra a geometria (1)</a> alebo <a href="'+self.add_base_url(u'1-MMN-120_00.html')+u'">1-MMN-120_00 Lineárna algebra a geometria (1)</a>)'
         }
         courses = {
             '1-MMN-150_00': u'Matematická analýza (2)',
@@ -50,8 +62,8 @@ class UtilsTests(unittest.TestCase):
 
     def test_get_url(self):
         data = {
-            '1-MMN-150': 'https://sluzby.fmph.uniba.sk/infolist/SK/1-MMN-150.html',
-            '1-MAT-150': 'https://sluzby.fmph.uniba.sk/infolist/SK/1-MAT-150.html'
+            '1-MMN-150': self.add_base_url('1-MMN-150.html'),
+            '1-MAT-150': self.add_base_url('1-MAT-150.html')
         }
 
         for in_data, out_data in data.iteritems():
@@ -61,8 +73,8 @@ class UtilsTests(unittest.TestCase):
         self.assertFalse(utils.get_url(''))
 
     def test_make_link_from_code(self):
-        self.assertEqual(utils.make_link_from_code('test1', 'test2', lang='sk'), '<a href="https://sluzby.fmph.uniba.sk/infolist/SK/test1.html">test2</a>')
-        self.assertEqual(utils.make_link_from_code('test1', 'test2', lang='en'), '<a href="https://sluzby.fmph.uniba.sk/infolist/EN/test1.html">test2</a>')
+        self.assertEqual(utils.make_link_from_code('test1', 'test2', lang='sk'), '<a href="'+self.add_base_url('test1.html')+'">test2</a>')
+        self.assertEqual(utils.make_link_from_code('test1', 'test2', lang='en'), '<a href="'+self.add_base_url('test1.html')+'">test2</a>')
 
     def test_make_link(self):
         self.assertEqual(utils.make_link('test1', 'test2', title=''), '<a href="test1">test2</a>')
