@@ -17,6 +17,7 @@ my $tempdir = tempdir( CLEANUP=>0 );
 
 download_data("sk");
 download_data("en");
+download_webpages_csvs();
 process_data("sk","regular","template_2015_sk.html");
 process_data("en","regular","template_2015_en.html");
 process_data("sk","statnice","template_2015_sk.html");
@@ -42,12 +43,13 @@ sub create_links {
 
 sub process_data {
     my ($lang,$mode,$sablona) = @_;
-    
+    my $datadir="$tempdir/$fakulta";
+
     my $ultimatetarget = "$target_directory/$season/$lang";
     print STDERR "Processing $lang/$mode into $ultimatetarget...\n";
 
     my_run("mkdir -p $ultimatetarget");
-    my_run("python $Bin/AIS_XML2HTML.py --lang $lang --mode $mode $tempdir/$fakulta/xml_files_$lang $ultimatetarget templates/$sablona");
+    my_run("python $Bin/AIS_XML2HTML.py --lang $lang --mode $mode --webpages $datadir/webpages_csv_files $datadir/xml_files_$lang $ultimatetarget templates/$sablona");
 
 }
 
@@ -77,6 +79,21 @@ sub download_data {
 	my_run($wgetcmd);
     }
     close IN;
+}
+
+sub download_webpages_csvs {
+    my $datadir="$tempdir/$fakulta";
+    my $filelist="$Bin/$fakulta-webpages.sources";
+    my $csvdir="$datadir/webpages_csv_files";
+
+    if (-e $filelist) {
+        print STDERR "Retrieving course web pages lists...\n";
+
+        my $wgetcmd = "wget -N -q -i \"$filelist\" -P \"$csvdir\"";
+
+        my_run("mkdir -p $csvdir");
+        my_run($wgetcmd);
+    }
 }
 
 sub my_run
