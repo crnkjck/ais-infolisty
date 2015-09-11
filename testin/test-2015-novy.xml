@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><obsah>
+<organizacnaJednotka>Univerzita Komenského v Bratislave - Fakulta matematiky, fyziky a informatiky</organizacnaJednotka>
+<vysokaSkola>Univerzita Komenského v Bratislave</vysokaSkola>
+<fakulta>Fakulta matematiky, fyziky a informatiky</fakulta>
+<informacneListy>
+<informacnyList>
+<id>96011</id>
+<kodTypPredmetu>B</kodTypPredmetu>
+<skratka>1-AIN-130</skratka>
+<kod>FMFI.KAI/1-AIN-130/13</kod>
+<nazov>Programovanie (1)</nazov>
+<kredit>8</kredit>
+<sposobUkoncenia>Hodnotenie</sposobUkoncenia>
+<sposobVyucby>Prednáška / Cvičenie</sposobVyucby>
+<rozsahTyzdenny>4 / 2</rozsahTyzdenny>
+<rozsahSemestranly>56 / 28</rozsahSemestranly>
+<obdobie>1</obdobie>
+<doplnujuceUdaje>(Jednoodborové štúdium, bakalársky I. st., denná forma)</doplnujuceUdaje>
+<kodSemesterStudPlan>Z</kodSemesterStudPlan>
+<rokRocnikStudPlan>1</rokRocnikStudPlan>
+<zabezpecuju>RNDr. Andrej Blaho, PhD.</zabezpecuju>
+<datumSchvalenia>10.11.2014</datumSchvalenia>
+<vylucujucePredmety/>
+<podmienujucePredmety/>
+<podmienujucePredmetyNazov/>
+<podmPredmetyKodNazov/>
+<garanti>
+<garant>
+<typGaranta>garant</typGaranta>
+<plneMeno>doc. RNDr. Damas Gruska, PhD.</plneMeno>
+</garant>
+</garanti>
+<sposobyVyucbyRozsahMetoda>
+<sposobVyucbyRozsahMetoda>
+<sposobVyucby>Prednáška</sposobVyucby>
+<rozsahTyzdenny>4</rozsahTyzdenny>
+<rozsahSemestralny>56</rozsahSemestralny>
+<metodaStudia>prezenčná</metodaStudia>
+</sposobVyucbyRozsahMetoda>
+<sposobVyucbyRozsahMetoda>
+<sposobVyucby>Cvičenie</sposobVyucby>
+<rozsahTyzdenny>2</rozsahTyzdenny>
+<rozsahSemestralny>28</rozsahSemestralny>
+<metodaStudia>prezenčná</metodaStudia>
+</sposobVyucbyRozsahMetoda>
+</sposobyVyucbyRozsahMetoda>
+<podmienujucePredmetyStrukt/>
+<kodyTypovVyucby>
+<kodtypVyucby>A</kodtypVyucby>
+</kodyTypovVyucby>
+<studijneProgramy>
+<studijnyProgram>
+<id>3510</id>
+<skratka>muMAIN/k</skratka>
+<popis>učiteľstvo matematiky a informatiky (konverzný)</popis>
+<kodSemester>Z</kodSemester>
+<rokRocnik>1</rokRocnik>
+<metodaStudia>prezenčná</metodaStudia>
+<semesterPoradie>1</semesterPoradie>
+</studijnyProgram>
+<studijnyProgram>
+<id>3508</id>
+<skratka>muFYIN/k</skratka>
+<popis>učiteľstvo fyziky a informatiky (konverzný)</popis>
+<kodSemester>Z</kodSemester>
+<rokRocnik>1</rokRocnik>
+<metodaStudia>prezenčná</metodaStudia>
+<semesterPoradie>1</semesterPoradie>
+</studijnyProgram>
+<studijnyProgram>
+<id>980</id>
+<skratka>AIN</skratka>
+<popis>aplikovaná informatika</popis>
+<kodSemester>Z</kodSemester>
+<rokRocnik>1</rokRocnik>
+<metodaStudia>prezenčná</metodaStudia>
+<semesterPoradie>1</semesterPoradie>
+</studijnyProgram>
+</studijneProgramy>
+<stupneStudijnychProgramov>I., II.</stupneStudijnychProgramov>
+<metodyStudia>
+<metodaStudia>prezenčná</metodaStudia>
+</metodyStudia>
+<jeZaradenyVStudijnomPlane>true</jeZaradenyVStudijnomPlane>
+<stupenPredmetu>I., II.</stupenPredmetu>
+<vyucujuciAll>
+<vyucujuci>
+<poradie>1</poradie>
+<typ>P</typ>
+<typPopis>prednášajúci</typPopis>
+<meno>Andrej</meno>
+<priezvisko>Blaho</priezvisko>
+<plneMeno>RNDr. Andrej Blaho, PhD.</plneMeno>
+<jazykyPredmetu>slovenský</jazykyPredmetu>
+</vyucujuci>
+</vyucujuciAll>
+<rocniky>
+<semester>Z</semester>
+<rocnik>
+<semesterPoradie>1</semesterPoradie>
+</rocnik>
+</rocniky>
+<_VH_>
+<popisTypuTextu>Váha hodnotenia predmetu (priebežné/záverečné)</popisTypuTextu>
+<texty>
+<p>0/100</p>
+</texty>
+</_VH_>
+<_SO_>
+<popisTypuTextu>Stručná osnova predmetu</popisTypuTextu>
+<texty>
+<p>Vývojové prostredie programovacieho jazyka Python; programy, funkcie, rekurzia, moduly; dátové štruktúry jazyka, polia, texty, súbory, slovníky, množiny;  grafické aplikácie, udalosti; objektovo orientované programovanie, dedičnosť, polymorfizmus.</p>
+</texty>
+</_SO_>
+<_L_>
+<popisTypuTextu>Odporúčaná literatúra</popisTypuTextu>
+<texty>
+<p>Prednášky vyučujúceho, web: http://python.input.sk</p>
+<p>Summerfield: Python 3: Výukový kurz, Computer Press 2010</p>
+<p>Miller: How to Think Like a Computer Scientist: Interactive Edition, web: http://interactivepython.org/runestone/static/thinkcspy/index.html</p>
+</texty>
+</_L_>
+<_C_>
+<popisTypuTextu>Cieľ (TEXT ZO STARÉHO IL - NEPOUŽÍVAŤ)</popisTypuTextu>
+<texty>
+<p>Zvládnuť základy programovania v objektovom programovacom jazyku Python, zoznámiť sa so základnými programovými a dátovými štruktúrami jazyka, úvod do OOP.</p>
+</texty>
+</_C_>
+<_P_>
+<popisTypuTextu>Priebežné hodnotenie (TEXT ZO STARÉHO IL - NEPOUŽÍVAŤ)</popisTypuTextu>
+<texty>
+<p>pravidelné domáce úlohy, semestrálny projekt</p>
+</texty>
+</_P_>
+<_Z_>
+<popisTypuTextu>Záverečné hodnotenie (TEXT ZO STARÉHO IL - NEPOUŽÍVAŤ)</popisTypuTextu>
+<texty>
+<p>záverečný písomný test, praktická skúška pri počítači</p>
+</texty>
+</_Z_>
+<_PA_>
+<popisTypuTextu>Podmienky na absolvovanie predmetu</popisTypuTextu>
+<texty>
+<p>Priebežné hodnotenie: domáce úlohy, semestrálny projekt</p>
+<p>Skúška: záverečný písomný test, praktická skúška pri počítači</p>
+<p>Orientačná stupnica hodnotenia: A 90%, B 80%, C 70%, D 60%, E 50%</p>
+</texty>
+</_PA_>
+<_VV_>
+<popisTypuTextu>Výsledky vzdelávania</popisTypuTextu>
+<texty>
+<p>Študenti získajú základné zručnosti programovania v objektovom programovacom jazyku Python, zoznámia sa so základnými dátovými štruktúrami jazyka, získajú prvé zručnosti s objektovo orientovaným programovaním.</p>
+</texty>
+</_VV_>
+<_PJ_>
+<popisTypuTextu>Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu</popisTypuTextu>
+<texty>
+<p>slovenský, anglický</p>
+</texty>
+</_PJ_>
+<hodnoteniaPredmetu>
+<hodnoteniePredmetu>
+<kod>A</kod>
+<pocetHodnoteni>265</pocetHodnoteni>
+<percentualneVyjadrenieZCelkPoctuHodnoteni>22.03</percentualneVyjadrenieZCelkPoctuHodnoteni>
+</hodnoteniePredmetu>
+<hodnoteniePredmetu>
+<kod>B</kod>
+<pocetHodnoteni>110</pocetHodnoteni>
+<percentualneVyjadrenieZCelkPoctuHodnoteni>9.14</percentualneVyjadrenieZCelkPoctuHodnoteni>
+</hodnoteniePredmetu>
+<hodnoteniePredmetu>
+<kod>C</kod>
+<pocetHodnoteni>154</pocetHodnoteni>
+<percentualneVyjadrenieZCelkPoctuHodnoteni>12.8</percentualneVyjadrenieZCelkPoctuHodnoteni>
+</hodnoteniePredmetu>
+<hodnoteniePredmetu>
+<kod>D</kod>
+<pocetHodnoteni>157</pocetHodnoteni>
+<percentualneVyjadrenieZCelkPoctuHodnoteni>13.05</percentualneVyjadrenieZCelkPoctuHodnoteni>
+</hodnoteniePredmetu>
+<hodnoteniePredmetu>
+<kod>E</kod>
+<pocetHodnoteni>183</pocetHodnoteni>
+<percentualneVyjadrenieZCelkPoctuHodnoteni>15.21</percentualneVyjadrenieZCelkPoctuHodnoteni>
+</hodnoteniePredmetu>
+<hodnoteniePredmetu>
+<kod>FX</kod>
+<pocetHodnoteni>334</pocetHodnoteni>
+<percentualneVyjadrenieZCelkPoctuHodnoteni>27.76</percentualneVyjadrenieZCelkPoctuHodnoteni>
+</hodnoteniePredmetu>
+<celkovyPocetHodnotenychStudentov>1203</celkovyPocetHodnotenychStudentov>
+<pocetTypovHodnoteni>6</pocetTypovHodnoteni>
+</hodnoteniaPredmetu>
+</informacnyList>
+</informacneListy>
+</obsah>

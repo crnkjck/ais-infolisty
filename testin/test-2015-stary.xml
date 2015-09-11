@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?><obsah>
+<organizacnaJednotka>Univerzita Komenského v Bratislave - Fakulta matematiky, fyziky a informatiky</organizacnaJednotka>
+<vysokaSkola>Univerzita Komenského v Bratislave</vysokaSkola>
+<fakulta>Fakulta matematiky, fyziky a informatiky</fakulta>
+<informacneListy>
+<informacnyList>
+<id>28561</id>
+<kodTypPredmetu>B</kodTypPredmetu>
+<skratka>1-AIN-160</skratka>
+<kod>FMFI.KAI/1-AIN-160/00</kod>
+<nazov>Diskrétna matematika (2)</nazov>
+<kredit>6</kredit>
+<sposobUkoncenia>Hodnotenie</sposobUkoncenia>
+<sposobVyucby>Kurz</sposobVyucby>
+<rozsahTyzdenny>4</rozsahTyzdenny>
+<rozsahSemestranly>56</rozsahSemestranly>
+<obdobie>2</obdobie>
+<doplnujuceUdaje>(Jednoodborové štúdium, bakalársky I. st., denná forma)</doplnujuceUdaje>
+<kodSemesterStudPlan>L</kodSemesterStudPlan>
+<rokRocnikStudPlan>1</rokRocnikStudPlan>
+<zabezpecuju>Ing. Ján Komara, PhD., RNDr. Tatiana Jajcayová, PhD.</zabezpecuju>
+<datumSchvalenia>10.11.2014</datumSchvalenia>
+<vylucujucePredmety/>
+<podmienujucePredmety>FMFI.KAI/1-AIN-120/00</podmienujucePredmety>
+<podmienujucePredmetyNazov>FMFI.KAI/1-AIN-120/00 - Diskrétna matematika (1)</podmienujucePredmetyNazov>
+<podmPredmetyKodNazov>1-AIN-120 - Diskrétna matematika (1)</podmPredmetyKodNazov>
+<garanti>
+<garant>
+<typGaranta>garant</typGaranta>
+<plneMeno>doc. RNDr. Damas Gruska, PhD.</plneMeno>
+</garant>
+</garanti>
+<sposobyVyucbyRozsahMetoda>
+<sposobVyucbyRozsahMetoda>
+<sposobVyucby>Kurz</sposobVyucby>
+<rozsahTyzdenny>4</rozsahTyzdenny>
+<rozsahSemestralny>56</rozsahSemestralny>
+<metodaStudia>prezenčná</metodaStudia>
+</sposobVyucbyRozsahMetoda>
+</sposobyVyucbyRozsahMetoda>
+<podmienujucePredmetyStrukt>
+<podmienujuciPredmet>
+<kod>1-AIN-120</kod>
+<nazov>Diskrétna matematika (1)</nazov>
+</podmienujuciPredmet>
+</podmienujucePredmetyStrukt>
+<kodyTypovVyucby>
+<kodtypVyucby>A</kodtypVyucby>
+</kodyTypovVyucby>
+<studijneProgramy>
+<studijnyProgram>
+<id>980</id>
+<skratka>AIN</skratka>
+<popis>aplikovaná informatika</popis>
+<kodSemester>L</kodSemester>
+<rokRocnik>1</rokRocnik>
+<metodaStudia>prezenčná</metodaStudia>
+<semesterPoradie>2</semesterPoradie>
+</studijnyProgram>
+</studijneProgramy>
+<stupneStudijnychProgramov>I.</stupneStudijnychProgramov>
+<metodyStudia>
+<metodaStudia>prezenčná</metodaStudia>
+</metodyStudia>
+<jeZaradenyVStudijnomPlane>true</jeZaradenyVStudijnomPlane>
+<stupenPredmetu>I.</stupenPredmetu>
+<vyucujuciAll>
+<vyucujuci>
+<poradie>1</poradie>
+<typ>P</typ>
+<typPopis>prednášajúci</typPopis>
+<meno>Ján</meno>
+<priezvisko>Komara</priezvisko>
+<plneMeno>Ing. Ján Komara, PhD.</plneMeno>
+<jazykyPredmetu>slovenský</jazykyPredmetu>
+</vyucujuci>
+<vyucujuci>
+<poradie>2</poradie>
+<typ>P</typ>
+<typPopis>prednášajúci</typPopis>
+<meno>Tatiana</meno>
+<priezvisko>Jajcayová</priezvisko>
+<plneMeno>RNDr. Tatiana Jajcayová, PhD.</plneMeno>
+<jazykyPredmetu>slovenský</jazykyPredmetu>
+</vyucujuci>
+</vyucujuciAll>
+<rocniky>
+<semester>L</semester>
+<rocnik>
+<semesterPoradie>2</semesterPoradie>
+</rocnik>
+</rocniky>
+<_VH_>
+<popisTypuTextu>Váha hodnotenia predmetu (priebežné/záverečné)</popisTypuTextu>
+<texty>
+<p>50/50</p>
+</texty>
+</_VH_>
+<_SO_>
+<popisTypuTextu>Stručná osnova predmetu</popisTypuTextu>
+<texty>
+<p>- Zobrazenia, relácie, funkcie; Relácia ekvivalencie, rozklady; relácia usporiadania.
+</p>
+<p>- Základy mohutnosti množín.
+</p>
+<p>- O(f) a \theta (f) notácia; Veľmi základná algoritmická kompexita.
+</p>
+<p>- Rekurencie.
+</p>
+<p>- Grafy.
+</p>
+<p>- Základné grafové algoritmy.
+</p>
+</texty>
+</_SO_>
+<_L_>
+<popisTypuTextu>Odporúčaná literatúra</popisTypuTextu>
+<texty>
+<p>Grimaldi, R.P.: Discrete and Combinatorial Mathematics
+</p>
+<p>Graham, Knuth, Patashnik: Concrete Mathematics. A Foundation for Computer Science
+</p>
+<p>Cormen, Leiserson, Rivest: Introduction to Algorithms
+</p>
+<p>Preparata, Yeh: Úvod do teórie diskrétnych matematických štruktúr
+</p>
+<p>Olejár D., Škoviera M: Diskrétna matematika I, Bratislava UK, 1990.
+</p>
+<p>Kolář J., Štepánková O., Chytil M.: Logika, algebry a grafy, SNTL-Alfa, Praha 1989
+</p>
+<p>J.Matoušek, J.Nešetřil: Kapitoly z diskrétnej matematiky, Matfyzpress 1996, Praha (2.vydanie)
+</p>
+<p>Š. Znám: Kombinatorika a teória grafov, MFF UK (skriptá)
+</p>
+</texty>
+</_L_>
+<_C_>
+<popisTypuTextu>Cieľ (TEXT ZO STARÉHO IL - NEPOUŽÍVAŤ)</popisTypuTextu>
+<texty>
+<p>Prednáška poskytne študentom matematické základy nevyhnutné pre štúdium informatiky. Študenti si zároveň osvoja matematickú kultúru, spôsob myslenia a vyjadrovania, ako aj metódy dôkazov.
+</p>
+</texty>
+</_C_>
+<_P_>
+<popisTypuTextu>Priebežné hodnotenie (TEXT ZO STARÉHO IL - NEPOUŽÍVAŤ)</popisTypuTextu>
+<texty>
+<p>hodnotené domáce úlohy, testy v priebehu semestra</p>
+</texty>
+</_P_>
+<_Z_>
+<popisTypuTextu>Záverečné hodnotenie (TEXT ZO STARÉHO IL - NEPOUŽÍVAŤ)</popisTypuTextu>
+<texty>
+<p>skúška</p>
+</texty>
+</_Z_>
+<hodnoteniaPredmetu>
+<hodnoteniePredmetu>
+<kod>A</kod>
+<pocetHodnoteni>49</pocetHodnoteni>
+<percentualneVyjadrenieZCelkPoctuHodnoteni>5.29</percentualneVyjadrenieZCelkPoctuHodnoteni>
+</hodnoteniePredmetu>
+<hodnoteniePredmetu>
+<kod>B</kod>
+<pocetHodnoteni>69</pocetHodnoteni>
+<percentualneVyjadrenieZCelkPoctuHodnoteni>7.44</percentualneVyjadrenieZCelkPoctuHodnoteni>
+</hodnoteniePredmetu>
+<hodnoteniePredmetu>
+<kod>C</kod>
+<pocetHodnoteni>174</pocetHodnoteni>
+<percentualneVyjadrenieZCelkPoctuHodnoteni>18.77</percentualneVyjadrenieZCelkPoctuHodnoteni>
+</hodnoteniePredmetu>
+<hodnoteniePredmetu>
+<kod>D</kod>
+<pocetHodnoteni>269</pocetHodnoteni>
+<percentualneVyjadrenieZCelkPoctuHodnoteni>29.02</percentualneVyjadrenieZCelkPoctuHodnoteni>
+</hodnoteniePredmetu>
+<hodnoteniePredmetu>
+<kod>E</kod>
+<pocetHodnoteni>240</pocetHodnoteni>
+<percentualneVyjadrenieZCelkPoctuHodnoteni>25.89</percentualneVyjadrenieZCelkPoctuHodnoteni>
+</hodnoteniePredmetu>
+<hodnoteniePredmetu>
+<kod>FX</kod>
+<pocetHodnoteni>126</pocetHodnoteni>
+<percentualneVyjadrenieZCelkPoctuHodnoteni>13.59</percentualneVyjadrenieZCelkPoctuHodnoteni>
+</hodnoteniePredmetu>
+<celkovyPocetHodnotenychStudentov>927</celkovyPocetHodnotenychStudentov>
+<pocetTypovHodnoteni>6</pocetTypovHodnoteni>
+</hodnoteniaPredmetu>
+</informacnyList>
+</informacneListy>
+</obsah>
