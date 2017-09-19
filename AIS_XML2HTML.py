@@ -154,6 +154,7 @@ def render_HTML(data, tpl_name, output_path=None, courses=None, lang='sk', mode=
     script_abs_path = os.path.dirname(os.path.abspath(__file__))
     env = Environment(loader=FileSystemLoader(script_abs_path))
     html_tpl = env.get_template(tpl_name)
+    _, extension = os.path.splitext(tpl_name)
 
     # zapis do HTML suborov
     for course in data:
@@ -165,7 +166,7 @@ def render_HTML(data, tpl_name, output_path=None, courses=None, lang='sk', mode=
 
         html = html_tpl.render(course)
 
-	filename = '%s.html' % kod_predmetu
+	filename = '%s%s' % (kod_predmetu, extension)
         filename = filename.replace("/","_")
         if output_path is not None:
 	    path = os.path.join(output_path, filename)
