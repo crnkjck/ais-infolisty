@@ -88,7 +88,7 @@ def extract_infolists(filename, lang='sk', mode='regular', verbose=True):
                 'doplujuceUdaje': 'doplujuceUdaje',
                 'zabezpecuju': 'zabezpecuju',
                 'strucnaOsnova': '_SO_/texty',
-                'webstranka': '_URL_/texty/p',
+                'url': '_URL_/texty/p',
                 'ciel': '_C_/texty',
                 'zaverecneHodnotenie': '_Z_/texty/p',
                 'literatura': '_L_/texty',
@@ -134,8 +134,8 @@ def extract_infolists(filename, lang='sk', mode='regular', verbose=True):
         d['kod'] = utils.parse_code(d['kod'])
 
         # uprava URL
-        if d['webstranka']:
-            d['webstranka'] = utils.make_link(d['webstranka'],d['webstranka'])
+        if d['url']:
+            d['webstranka'] = utils.make_link(d['url'],d['url'])
             
         data.append(d)
 
