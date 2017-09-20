@@ -1,0 +1,2 @@
+{{ kod }},en,"{{ nazov }}",{% if url %}"{{ url }}"{% endif %},"{{ zabezpecuju }}"
+
